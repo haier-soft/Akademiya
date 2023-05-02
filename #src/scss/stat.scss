@@ -1,0 +1,125 @@
+.stat {
+    &__items {
+        padding: 0 48px 29px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            background: #ECEEFF;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 55%;
+            z-index: -1;
+        }
+    }
+}
+.item-stat {
+	&__nmb {
+        font-weight: 600;
+        font-size: 100px;
+        line-height: 145%;
+        background: radial-gradient(143.75% 2034.37% at 100% 13.13%, #360cb7 0%, #050112 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 6px;
+	}
+	.h6 {
+        padding-left: 10px;
+        color: #142349;
+	}
+    &:nth-child(1) {
+        .h6 {
+            padding-left: 25px;
+        }
+    }
+    &:nth-child(2) {
+        text-align: center;
+        .h6 {
+            padding-left: 0;
+        }
+    }
+}
+@media (max-width: $bp1) {
+    .stat__items {
+        padding: 0 24px 29px;
+    }
+    .item-stat__nmb {
+        font-size: 80px;
+        margin-bottom: -6px;
+    }
+    .item-stat:nth-child(1) {
+        .h6 {
+            padding-left: 18px;
+        }
+    }
+}
+@media (max-width: $bp2) {
+    .stat__items {
+        padding: 0 16px 18px;
+        &::before {
+            height: 67%        }
+    }
+    .item-stat__nmb {
+        font-size: 50px;
+        line-height: 68px;
+        margin-bottom: 10px;
+    }
+    .item-stat .h6 {
+        max-width: 146px;
+    }
+    .item-stat {
+        .h6 {
+            padding-left: 0;
+        }
+    }
+    .item-stat:nth-child(1) {
+        .h6 {
+            padding-left: 10px;
+        }
+    }
+}
+@media (max-width: 650px) {
+    .stat__items {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        &::before {
+            display: none;
+        }
+    }
+    .item-stat .h6 {
+        padding-left: 0 !important;
+        max-width: none;
+    }
+    .item-stat {   
+        min-width: 260px;
+        padding: 0 25px 18px;
+        position: relative;
+        margin-bottom: 15px;
+        &:before {
+            content: "";
+            display: block;
+            background: #ECEEFF;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 61%;
+            z-index: -1;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__nmb {
+            margin-bottom: 0px;
+        }
+    }
+}

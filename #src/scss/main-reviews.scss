@@ -1,0 +1,93 @@
+.main-reviews {
+    h2 {
+        max-width: 36%;
+    }
+    .letter-review {
+        height: 100%;
+    }
+}
+.letter-review {
+    padding: 32px 24px;
+    background-color: $white-gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    img {
+        flex: 0 0 120px;
+        width: 120px;
+        height: 120px;
+        margin-right: 16px
+    }
+	&__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+	}
+	&__info {
+        display: grid;
+        grid-template-columns: 97px auto;
+        margin-bottom: 32px;
+        span {
+            color: $light-blue;
+        }
+	}
+	&__btn {
+        color: $dark-gray;
+        margin-top: auto;
+        svg {
+            fill: $dark-gray;
+        }
+	}
+}
+@media (max-width: $bp1) {
+    .letter-review {
+        padding: 24px 16px;
+        img {
+            flex: 0 0 100px;
+            width: 100px;
+            height: 100px;
+        }
+        &__header {
+            margin-bottom: 24px;
+        }
+    }
+  }
+  @media (max-width: $bp2) {
+    .main-reviews h2 {
+        max-width: 343px;
+    }
+    .letter-review img {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 80px;
+    }
+    .letter-review__info {
+        margin-bottom: 24px;
+    }
+}
+@media (max-width: $bp4) {
+  .main-reviews .swiper {
+      overflow: hidden;
+  }
+  .main-reviews h2 {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .letter-review {
+    padding: 16px 8px;
+  }
+  .letter-review__header {
+    margin-bottom: 16px;
+  }
+  .letter-review img {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+  }
+  .letter-review__info {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

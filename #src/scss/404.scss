@@ -1,0 +1,97 @@
+.notfound {
+    background:  #CECFD4; 
+    padding-top: 200px;  
+    h1 {
+        color: $base-blue;
+        margin-bottom: 40px;       
+    }
+    &__inner, .container {
+        min-height: calc(100vh - 200px); 
+        min-height: calc(var(--vh, 1%) * 100 - 200px)
+    }
+    &__inner {
+        background-image: url(../img/404.jpg);
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    .container {
+        padding-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;   
+    }
+	&__content {
+        padding-right: 3.4vw;
+	}
+    .btn-main {
+        min-width: 250px;
+    }
+    @media (max-height: 700px) {
+        &__inner, .container {
+            min-height: 600px;
+        }
+    }
+    @media(max-width: $bp1) {
+        &__inner {
+            background-position: center left -20px;
+        }
+        .container {
+          padding-bottom: 90px;
+        }
+        &__content {
+            padding-right: 1.2vw;
+        }
+    }
+    @media(max-width: 1350px) {
+        &__inner {
+            background-size: 120% auto;
+            background-position: center left -60px;
+        }
+        &__content {
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 1200px) {
+        padding-top: 0;
+        &__inner, .container {
+            min-height: 930px;
+            
+        }
+        &__inner {  
+            background-position: top 3vw left;
+            background-size: 165% auto;
+        }
+        .container {
+            padding-top: 70vw;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 150px;
+        }
+    }
+    @media (max-width: 700px) {
+        .container, &__inner {
+            min-height: 0;
+        }
+    }
+    @media (max-width: $bp4) {
+        .container {
+            padding-bottom: 92px;
+        }
+        .btn {
+            min-width: 230px;
+        }
+    }
+    @media (max-width: 400px) {
+        &__inner {
+            background-size: 175% auto;
+            background-position: top 30vw left  
+        }
+        .container {
+            padding-top: 410px;
+        }
+    }
+}
+

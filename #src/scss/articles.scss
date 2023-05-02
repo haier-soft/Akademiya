@@ -1,0 +1,37 @@
+.articles {
+    &__action {
+       display: flex;
+       align-items: center;
+    }
+    .page-lbl {
+        margin-right: 32px;
+        white-space: nowrap;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 64px 8px;
+    }
+    &__items .item-article__body{
+        -webkit-line-clamp: 8;
+    }
+}
+@media (max-width: $bp2) {
+    .articles__items {
+        gap: 48px 8px;
+    }
+}
+@media (max-width: $bp4) {
+    .articles h1 {
+        text-align: center;
+    }
+    .articles .page-lbl {
+        margin-right: 24px;
+    }
+    .articles__items {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+

@@ -1,0 +1,75 @@
+@import "fonts";
+@import "null";
+@import "vars";
+@import "general";
+@import "header";
+@import "breadcrumbs";
+@import "hero";
+@import "service-hero";
+@import "stat";
+@import "main-problems";
+@import "main-reviews";
+@import "main-test";
+@import "main-clients";
+@import "main-form";
+@import "main-articles";
+@import "service-purpose";
+@import "service-process";
+@import "course-program";
+@import "main-team";
+@import "main-services";
+@import "articles";
+@import "reviews";
+@import "course-block";
+@import "404";
+@import "privacy";
+@import "article";
+@import "about";
+@import "contacts";
+@import "team";
+@import "modal";
+@import "footer";
+
+.fancybox__backdrop {
+    background: rgba(25, 58, 138, 0.5);
+    backdrop-filter: blur(5px);
+}
+.fancybox__thumbs,
+.fancybox__nav{
+    display: none;
+}
+
+.fancybox__slide{
+    justify-content: center;
+    padding: 16px !important;
+    &:before, &:after {
+        display: none;
+    }
+    @media (max-height: 400px) {
+        padding: 80px 16px 5px!important;
+    }
+}
+.video-gallery .fancybox__content {
+    width: 100% !important;
+    max-width: 1560px !important;
+    height: auto !important;
+    border-radius: 8px;
+    video, img, iframe {
+        display: block;
+        border-radius: 8px;
+        object-fit: cover;
+        
+    }
+}
+.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
+    cursor: default
+}
+.fancybox__toolbar {
+    background: none;
+}
+.fancybox__slide.has-image {
+    padding: 0px 80px !important;
+    @media (max-width: $bp2) {
+        padding: 70px 0 !important;
+    }
+}

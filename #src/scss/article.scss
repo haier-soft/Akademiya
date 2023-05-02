@@ -1,0 +1,25 @@
+.article {
+    .container {
+        max-width: 1068px;
+    }
+    &__header img, .page-content {
+        margin-top: 40px;
+    }
+    h1 {
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+    @media (max-width: $bp1) {
+        .container {
+            max-width: 828px;
+        }
+    }
+    @media (max-width: $bp2) {
+        .container {
+            max-width: 568px;
+        }
+        h1 {
+            margin-bottom: 24px;
+        }
+    }
+}

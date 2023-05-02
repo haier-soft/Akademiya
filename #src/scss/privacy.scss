@@ -1,0 +1,16 @@
+.privacy {
+    .page-content {
+        max-width: 75%;
+    }
+    h1 {
+        font-weight: 400;
+    }
+    @media (max-width: $bp2) {
+        .page-content {
+            max-width: 629px;
+        }
+        h1 {
+            margin-bottom: 24px;
+        }
+    }
+}

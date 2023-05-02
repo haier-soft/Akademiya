@@ -1,0 +1,46 @@
+<section class="main-form">
+    <div class="container">
+        <div class="main-form__left">
+            <div class="main-form__header"><h2>Мы поможем найти нужный инструмент для решения ваших проблем</h2></div>
+            <div class="h6">Просто оставьте заявку, и мы свяжемся с вами в ближайшее время</div> 
+        </div>
+        <div class="main-form__right">
+            <form class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                <div class="form__items">
+                    <div class="form__item inp">
+                        <span>Имя</span>
+                        <input type="text" name="name" class="form__inp">
+                        <div class="text-small form__item__error">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+                              <rect x="1.22656" y="0.0555573" width="11.5556" height="0.888889" transform="rotate(45 1.22656 0.0555573)"/>
+                              <rect x="0.554688" y="8.27744" width="11.5556" height="0.888889" transform="rotate(-45 0.554688 8.27744)"/>
+                            </svg>
+                            Текст введен неверно, попробуйте снова
+                        </div>
+                    </div>
+                    <div class="form__item inp">
+                        <span>Телефон</span>
+                        <input type="tel" name="tel" class="form__inp" placeholder="+7">
+                        <div class="text-small form__item__error">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+                            <rect x="1.22656" y="0.0555573" width="11.5556" height="0.888889" transform="rotate(45 1.22656 0.0555573)"/>
+                            <rect x="0.554688" y="8.27744" width="11.5556" height="0.888889" transform="rotate(-45 0.554688 8.27744)"/>
+                            </svg>
+                            Текст введен неверно, попробуйте снова
+                        </div>
+                    </div>
+                    <div class="form__item textarea">
+                        <span>Ваш запрос</span>
+                        <textarea class="form__textarea" placeholder="Введите текст"></textarea>
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button class="btn btn-main" type="submit">Оставить заявку
+                        <svg><use xlink:href="img/iconsprite/sprite.svg#arrow-up"></use></svg>
+                    </button>
+                    <div class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на&nbsp;<a href="politika-konfidencialnosti.html">обработку персональных данных</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

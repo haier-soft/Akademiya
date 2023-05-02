@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html')
+
+<body class="page__body">
+    @@include("_svg.html")
+    <!--header-->
+    <header class="header fixed fixed-block">
+        @@include("_header.html")
+    </header>
+    <!--main-->
+    <main class="main">
+        <!--notfound-->
+        <section class="notfound">
+            <div class="notfound__inner">
+                <div class="container">
+                    <div class="notfound__content">
+                        <h1>Извините,<br>что-то произошло!</h1>
+                        <a href="#" class="btn btn-main">
+                            На главную
+                            <svg><use xlink:href="img/iconsprite/sprite.svg#arrow-up"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    @@include("_modal.html")  
+     <!--footer-->
+    @@include('_footer.html')
+</body>
+
+</html>

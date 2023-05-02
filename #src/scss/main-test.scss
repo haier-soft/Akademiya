@@ -1,0 +1,123 @@
+.main-test {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(180deg, #D9DADC 36.86%, #ECF0F3 100%);
+    }
+    &__content {
+        max-width: 49.75%;
+        min-height: 718px;
+        display: grid;
+        align-content: space-between;
+    }
+	 &__btn {
+        padding: 40px 0;
+        border-bottom: 1px solid $light-gray;
+	}
+    &__btn--demo {
+        a {
+           font-size: 18px;
+           line-height: 138%; 
+           @media screen and (max-width: $bp1) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: $bp2) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: $bp4) {
+            font-size: 13px;
+          }
+        }
+        
+    }
+	&__img {
+        position: absolute;
+        width: 59.5%;
+        top: 27%;
+        right: 0;
+        //transform: translateY(-60%);
+        img {
+            margin-left: auto;
+        }
+	}
+    h2 {
+        margin-bottom: 20px;
+    }
+    .h6 {
+        color: $dark-gray;
+        margin-top: 50px;
+        margin-bottom: 32px;
+        max-width: 50%;
+    }
+    .link-arrow {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: $bp1) {
+    .main-test__content {
+        min-height: 490px;
+        max-width: 48%;
+    }
+    .main-test .h6 {
+        max-width: 312px;
+    }
+    .main-test__btn {
+        padding: 24px 0;
+    }
+    .main-test__img {
+        width: 56.5%;
+    }
+}
+@media (max-width: $bp2) {
+    .main-test {    
+        &:after {
+            width: 100%;
+        }
+    }
+    .main-test__content {
+        min-height: 399px;
+        padding: 40px 0 48px;
+        max-width: none;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: center;       
+    }
+    .main-test__img {
+        top: 52%;
+        width: calc(50% - 10px);
+    }
+}
+@media (max-width: 750px) {
+    .main-test {
+        padding-bottom: 48px;
+        h3 {
+            mask-border-outset: 20px;
+        }
+        .h6 {
+            margin: 0 auto 12px;
+        }
+        h2, .h6 {
+        text-align: center;
+        }
+    }
+    .main-test__content {
+        min-height: 0;
+        display: block;
+        padding: 50px 0 20px;
+    }
+    .main-test__img {
+        position: relative;
+        width: 100%;
+        transform: translateY(0);
+    }
+    .main-test__btn {
+        padding: 20px 0;
+    }
+}

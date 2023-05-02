@@ -1,0 +1,120 @@
+.main-form {
+    padding: 64px 0;
+    background: url(../img/form-bg.jpg) center/cover no-repeat, #CACDD4;
+    .container {
+        display: flex;
+    } 
+    h2 {
+        margin-bottom: 16px;
+    }
+    .h6, h6 {
+        max-width: 518px;
+    }
+    &__left {
+        flex: 0 0 48.5%;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__right {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .form {
+        min-width: 65%;
+        max-width: 513px;
+    }
+}
+@media (max-width: $bp1) {
+    .main-form {
+        padding: 48px 0;
+        background-size: contain;
+        background-position: center left -72px;
+        &__right {
+            justify-content: flex-end;
+        }
+        .form {
+            width: 91%;
+            max-width: none;
+        }
+    }
+    .main-form__left{
+        flex: 0 0 53%;
+    }
+}
+@media (max-width: $bp2) {
+    .main-form {
+        background-position: top -20px left -72px;
+        background-size: auto 335px;
+        padding: 0 0 48px;
+        &.with-sub {
+            .main-form__header {
+                min-height: 335px;
+                max-width: 49.5%;
+                padding-top: 40px;
+            }
+        } 
+    }
+    .main-form .container {
+        display: block;
+    }
+    .main-form__header {
+        min-height: 315px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        max-width: 66%;
+    }
+    .main-form__left {
+        margin-right: 0;
+    }
+    .main-form .form {
+        width: 100%;
+    }
+    .main-form .h6,
+    .main-form h6  {
+       max-width: 340px;
+       margin-bottom: 32px;
+    }    
+}
+@media (max-width: $bp4) {
+    .main-form {
+        padding-top: 0;
+        background-image: none;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 69.5vw;
+            background: url(../img/form-bg-mobile.png) center /cover no-repeat;
+        }
+    }
+    .main-form__left {
+        margin: 0 0 9px 0;
+    }
+    .main-form__header {
+        max-width: none !important;
+        min-height: 0 !important;
+        padding-top: 0 !important;
+        text-align: center;
+        margin: 0 auto;
+        h6 {
+            margin-bottom: 0;
+        }
+    }  
+    .main-form .h6,
+    .main-form h6 {
+        max-width: 280px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .main-form.with-sub {
+        .main-form__right {
+            margin-top: 32px;
+        }
+    }
+}

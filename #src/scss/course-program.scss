@@ -1,0 +1,100 @@
+.course-program {
+    padding: 64px 0 169px;
+    min-height: 550px;
+    background: url(../img/course-program-bg.jpg) left center/contain no-repeat, #113293;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    h2 {
+        flex: 0 0 44.5%;
+        color: $white;
+    }
+    &__list {
+        flex: 0 0 49%;
+        margin-top: -7px;
+        li {
+            display: flex;
+            align-items: center;
+            color: $white;
+            margin-bottom: 26px;
+            svg {
+                flex: 0 0 38px;
+                width: 38px;
+                height: 38px;
+                stroke: url(#light-blue-gradient);
+                fill: url(#light-blue-gradient);
+                margin-right: 15px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.courses-fragments .video-items{
+    padding-bottom: 90px;
+}
+.courses-fragments h2{
+    margin-bottom: 64px;
+}
+@media (max-width: $bp1) {
+    .course-program {
+        padding: 64px 0 127px;
+        h2 {
+            flex: 0 0 35.5%;
+        }
+        &__list li {
+            margin-bottom: 24px
+        }
+    }
+}
+@media (max-width: $bp2) {
+    .course-program {
+        padding: 48px 0 307px;
+        background-position: bottom center;
+        .container {
+           flex-direction: column;
+           align-items: center; 
+        }  
+        h2 {
+            margin-bottom: 28px;
+        }  
+        &__list {
+            margin: 0 40px 0 0;
+            li {
+                margin-bottom: 18px;
+                svg {
+                    flex: 0 0 34px;
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        }   
+    }
+    .courses-fragments h2{
+        margin-bottom: 48px;
+    }
+}
+@media (max-width: $bp4) {
+    .course-program {
+        padding: 48px 0 251px;
+        h2 {
+            font-size: 32px;
+            margin: 0 auto 25px;
+            text-align: center;
+        }  
+        &__list {
+            margin: 0;
+            li {
+                margin-bottom: 20.5px;
+            }
+        }   
+    }
+    .courses-fragments h2{
+        text-align: center;
+    }
+    .courses-fragments .video-items{
+        padding-bottom: 60px;
+    }
+}

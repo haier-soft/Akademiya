@@ -1,0 +1,114 @@
+.course-block {
+    margin: -94px 0;
+    h3 {
+        font-weight: 600;
+        max-width: 981px;
+        margin: 0 auto 24px;
+        color: $dark-blue;
+    }
+    p {
+        max-width: 580px;
+        margin: 0 auto 40px;
+    }
+    .btn-main {
+        min-width: 384px;
+    }
+    &__inner {
+        padding: 94px 0;
+        overflow: hidden;
+    }
+    &__content {
+        background-color: #EBEBFB;
+        padding: 80px 0;
+        text-align: center;  
+        position: relative;  
+        &:before, &:after {
+            content: "";
+            display: block;
+            background: url(../img/logo-course.svg) center/contain no-repeat;
+            position: absolute;
+        }   
+        &:before {
+            width: 243px;
+            height: 239px;
+            right: -31px;
+            top: -94px;
+        } 
+        &:after {
+            width: 196px;
+            height: 170px;
+            left: 48px;
+            bottom: -26px;
+            opacity: 0.4;
+        }   
+    }
+}
+@media (max-width: $bp1) {
+    .course-block {
+        &__content {
+            padding: 64px 0;
+            &:before {
+                width: 190px;
+                height: 187px;
+                background-size: 110% 100%;
+                background-position: left bottom;
+                right: -10px;
+            }
+            &:after {
+                width: 145px;
+                height: 126px;
+                left: 40px;
+                bottom: -36px;
+            }
+        }
+        .btn-main {
+            min-width: 330px;
+        }
+    }
+}
+@media (max-width: $bp2) {
+    .course-block {
+        &__content {
+            &:before {
+                width: 150px;
+                height: 147px;
+            }
+            &:after {
+                width: 127px;
+                height: 110px;
+                left: 20px;
+            }
+        }
+        h3 {
+            margin-bottom: 16px;
+        }
+        p {
+            max-width: 448px;
+            margin-bottom: 32px;
+        }
+        .btn-main {
+            min-width: 300px;
+        }
+    }
+}
+@media (max-width: $bp4) {
+    .course-block {
+        &__content {
+            padding: 48px 0;
+            &:before {
+                width: 110px;
+                height: 108px;
+                top: -65px;
+                right: -5px
+            }
+            &:after {
+                width: 71px;
+                height: 62px;
+                left: 5px;
+            }
+        }
+        .btn-main {
+            min-width: 270px;
+        }
+    }
+}

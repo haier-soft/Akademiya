@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html')
+
+<body class="page__body">
+    @@include("_svg.html")
+    <!--header-->
+    <header class="header fixed fixed-block">
+      @@include('_header.html')
+    </header>
+    <!--main-->  
+    <main class="main">
+        <!--main-hero-->
+        @@include('_hero.html')
+        <!--stat-->
+        @@include('_stat.html')
+        <!--problems-slider-->
+        @@include('_main-problems.html')
+        <!--main-test-->
+        @@include('_main-test.html')
+        <!--reviews-slider-->
+        @@include('_main-reviews.html')
+        <!--main-clients-->
+        @@include('_main-clients.html')
+        <!--main-form-->
+        @@include('_main-form.html')
+        <!--articles-slider-->
+        <section class="section main-articles">
+          <div class="container">
+              <h2>Мы пишем много интресного</h2>
+              <div class="swiper main-articles__swiper">
+                <div class="swiper-nav">
+                    <button aria-label="Перейти на предыдущий слайд" type="button" class="btn nav-btn nav-btn--prev main-articles-btn--prev">
+                        <svg><use xlink:href="img/iconsprite/sprite.svg#prev-next-btn"></use></svg>
+                    </button>
+                    <div class="swiper-pagination main-articles-pagination"></div>
+                    <div class="swiper-scrollbar main-articles-scrollbar"></div>
+                    <button aria-label="Перейти на следующий слайд" type="button" class="btn nav-btn nav-btn--next main-articles-btn--next">
+                        <svg><use xlink:href="img/iconsprite/sprite.svg#prev-next-btn"></use></svg>
+                    </button>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include("_item-article.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-article.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-article.html")
+                    </div>
+                    <div class="swiper-slide">
+                        @@include("_item-article.html")
+                    </div>
+                </div>
+            </div>
+              <div class="swiper-link">
+                  <a href="#" class="link-arrow">
+                      Все статьи
+                      <span><svg><use xlink:href="img/iconsprite/sprite.svg#link-arrow-l"></use></svg></span>
+                  </a>
+              </div>
+          </div>
+      </section>
+    </main>
+    <!--feedback-modal-->
+    @@include("_modal.html")  
+     <!--footer-->
+    @@include('_footer.html')
+</body>
+
+</html>

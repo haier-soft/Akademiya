@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html')
+
+<body class="page__body">
+    @@include("_svg.html")
+    <!--header-->
+    <header class="header">
+        @@include("_header.html")
+    </header>
+    <!--main-->
+    <main class="main">
+        <!--breadcrumbs-->
+        <div class="breadcrumbs">
+          <div class="container">
+            <ul class="text-small">
+              <li><a href="main.html">Главная</a></li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+        </div>
+        <!--contacts-->
+        <section class="page-section contacts">
+            <div class="container">
+                <h1>Контакты</h1>
+                <div class="contacts__cols">
+                    <div class="contacts__col contacts__col--main">
+                        <h3>Основные</h3>
+                        <div class="page-soc">
+                            <div class="page-soc__item mail">
+                                <a href="mailto:IvanIvanov@.ru" class="h6">IvanIvanov@.ru</a>                     
+                            </div>
+                            <div class="page-soc__item phone">
+                                <a class="h6 link-main" href="tel:+79655622020">8 965 562 20 20</a>
+                            </div>
+                            <div class="page-soc__item soc-media">
+                                <a class="h6" href="#">Телеграм</a>   
+                                <a class="h6" href="#">WhatsApp</a>                   
+                            </div>
+                            <div class="page-soc__item address">
+                                <span class="h6">г. Москва пер. Нахимова 149, оф 2</span>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__col contacts__col--extra">
+                        <h3>Дополнительные</h3>
+                        <div class="contacts__col__items">
+                            <div class="contacts__col__item">
+                                <h6>Отдел аналитики</h6>
+                                <div class="page-soc">
+                                    <div class="page-soc__item mail">
+                                        <a href="mailto:IvanIvanov@.ru">IvanIvanov@.ru</a>                     
+                                    </div>
+                                    <div class="page-soc__item phone">
+                                        <a class="link-main" href="tel:+79655622020">8 965 562 20 20</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__col__item">
+                                <h6>Директор</h6>
+                                <div class="page-soc">
+                                    <div class="page-soc__item mail">
+                                        <a href="mailto:IvanIvanov@.ru">IvanIvanov@.ru</a>                     
+                                    </div>
+                                    <div class="page-soc__item phone">
+                                        <a class="link-main" href="tel:+79655622020">8 965 562 20 20</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__col__item">
+                                <h6>Отдел кадров</h6>
+                                <div class="page-soc">
+                                    <div class="page-soc__item mail">
+                                        <a href="mailto:IvanIvanov@.ru">IvanIvanov@.ru</a>                     
+                                    </div>
+                                    <div class="page-soc__item phone">
+                                        <a class="link-main" href="tel:+79655622020">8 965 562 20 20</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="form-contacts">
+            <div class="container">
+                <div class="form-contacts__content">
+                    <h3>Связаться с нами</h3>
+                    <form class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                        <div class="form__items">
+                            <div class="form__item inp">
+                                <span>Имя</span>
+                                <input type="text" name="name" class="form__inp">
+                                <div class="text-small form__item__error">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+                                      <rect x="1.22656" y="0.0555573" width="11.5556" height="0.888889" transform="rotate(45 1.22656 0.0555573)"/>
+                                      <rect x="0.554688" y="8.27744" width="11.5556" height="0.888889" transform="rotate(-45 0.554688 8.27744)"/>
+                                    </svg>
+                                    Текст введен неверно, попробуйте снова
+                                </div>
+                            </div>
+                            <div class="form__item inp">
+                                <span>Телефон</span>
+                                <input type="tel" name="tel" class="form__inp" placeholder="+7">
+                                <div class="text-small form__item__error">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+                                    <rect x="1.22656" y="0.0555573" width="11.5556" height="0.888889" transform="rotate(45 1.22656 0.0555573)"/>
+                                    <rect x="0.554688" y="8.27744" width="11.5556" height="0.888889" transform="rotate(-45 0.554688 8.27744)"/>
+                                    </svg>
+                                    Текст введен неверно, попробуйте снова
+                                </div>
+                            </div>
+                            <div class="form__item textarea">
+                                <span>Ваш запрос</span>
+                                <textarea class="form__textarea" placeholder="Введите текст"></textarea>
+                            </div>
+                        </div>
+                        <div class="form__footer">
+                            <button class="btn btn-main" type="submit">Оставить заявку
+                                <svg><use xlink:href="img/iconsprite/sprite.svg#arrow-up"></use></svg>
+                            </button>
+                            <div class="form__txt">Нажимая на кнопку «Оставить заявку», я даю согласие на&nbsp;<a href="politika-konfidencialnosti.html">обработку персональных данных</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-contacts__map">
+                <h4>Работаем <span>по всей России</span></h4>
+            </div>
+        </div>
+    </main>
+    @@include("_modal.html")  
+     <!--footer-->
+    @@include('_footer.html')
+</body>
+
+</html>

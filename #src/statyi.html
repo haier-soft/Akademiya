@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @@include('_head.html')
+  <body>
+    @@include("_svg.html")
+    <!--header-->
+    <header class="header">
+        @@include('_header.html')
+    </header>
+    <!--main-->    
+    <main>
+      <!--breadcrumbs-->
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="text-gray">
+            <li><a href="main.html">Главная</a></li>
+            <li>Статьи</li>
+          </ul>
+        </div>
+      </div>
+      <!--articles-->
+      <section class="page-section articles">
+        <div class="container">
+          <h1>Статьи</h1>
+          <div class="articles__action">
+            <span class="page-lbl">Показать</span>
+            <div class="select-custom articles__select" aria-expanded="false">
+                <div class="select-custom__selected">Все</div>
+                <ul class="select-custom__options">
+                  <li class="select-custom__option selected"><a href="#">Все</a></li>
+                  <li class="select-custom__option"><a href="#" >Наставничество</a></li>
+                  <li class="select-custom__option"><a href="#" >Упраленческий консалтинг</a></li>
+                  <li class="select-custom__option"><a href="#" >Упраленческий консалтинг</a></li>
+                  <li class="select-custom__option"><a href="#" >Упраленческий консалтинг</a></li>
+                  <li class="select-custom__option"><a href="#" >Упраленческий консалтинг</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="page-wrapper articles__items">
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+            @@include("_item-article.html")
+          </div>
+          <!--pagination-->
+          <div class="pagination">
+            <button disabled aria-label="Перейти на предыдущую страницу" type="button" class="btn nav-btn nav-btn--prev">
+              <svg><use xlink:href="img/iconsprite/sprite.svg#prev-next-btn"></use></svg>
+            </button>
+            <div class="pagination__links">
+              <span class="pagination__link current">1</span>
+              <a class="pagination__link" href="#">2</a>
+              <a class="pagination__link" href="#">3</a>
+              <a class="pagination__link" href="#">4</a>
+              <a class="pagination__link" href="#">5</a>
+            </div>
+            <button aria-label="Перейти на следующую страницу" type="button" class="btn nav-btn nav-btn--next">
+              <svg><use xlink:href="img/iconsprite/sprite.svg#prev-next-btn"></use></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>  
+    @@include('_modal.html')
+    <!--footer--> 
+    @@include('_footer.html')
+  </body>
+</html>
