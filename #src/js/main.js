@@ -73,6 +73,7 @@ menuMobileBtn.addEventListener('click', (e) => {
   }
   menuMobile.classList.toggle("active")
   iconMenu.classList.toggle("active");
+  document.body.classList.remove("no-scroll")
 });
 //phone menu
 iconMenu.addEventListener("click", () => {
@@ -85,10 +86,12 @@ iconMenu.addEventListener("click", () => {
       iconMenu.classList.remove("active");
       menuMobile.classList.remove("active");
       menuMobileBtn.textContent = "Наши услуги"
+      document.body.classList.remove("no-scroll")
     }, 250);
   } else {
     iconMenu.classList.add("active");
     menuMobile.classList.add("active");
+    document.body.classList.add("no-scroll")
     menuMobileBtn.textContent = "Скрыть"
   }
 })
