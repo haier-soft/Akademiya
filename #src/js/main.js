@@ -2,7 +2,7 @@ window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
     document.body.classList.remove("no-scroll")
-  }, 2000);
+  }, 1100);
 }
 const breadCrumbs = document.querySelector(".breadcrumbs")
 const header = document.querySelector(".header")
