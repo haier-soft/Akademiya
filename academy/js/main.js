@@ -1,4 +1,9 @@
-
+window.onload = function () {
+  setTimeout(() => {
+    document.body.classList.add("loaded")
+    document.body.classList.remove("no-scroll")
+  }, 2000);
+}
 const breadCrumbs = document.querySelector(".breadcrumbs")
 const header = document.querySelector(".header")
 const menuMobileBtn = document.querySelector('.menu-mobile__btn');

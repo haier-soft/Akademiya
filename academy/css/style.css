@@ -243,6 +243,12 @@ body {
   overflow: hidden;
 }
 
+.loaded .preloader {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
 h1,
 .h1 {
   font-size: 60px;
@@ -1321,6 +1327,111 @@ small span {
   -ms-flex: 0 0 calc(50% - 4px);
   flex: 0 0 calc(50% - 4px);
   margin-right: 8px;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #7C8EBA;
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.preloader__inner {
+  width: 267px;
+  height: 232px;
+  position: relative;
+}
+
+.preloader__image2 {
+  fill: #17064A;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 0%;
+  will-change: height, opacity;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  -webkit-animation: imgLoading 1s 1.1s linear both;
+  animation: imgLoading 1s 1.1s linear both;
+}
+
+.preloader__image1 {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #17064A;
+  stroke-dasharray: 0, 267;
+  stroke-dashoffset: -55;
+  -webkit-animation: dash 1s linear both;
+  animation: dash 1s linear both;
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 0, 267;
+  }
+
+  100% {
+    stroke-dasharray: 267, 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 0, 267;
+  }
+
+  100% {
+    stroke-dasharray: 267, 0;
+  }
+}
+
+@-webkit-keyframes imgLoading {
+  0% {
+    height: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes imgLoading {
+  0% {
+    height: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 .header.fixed {
@@ -6531,6 +6642,11 @@ small span {
 
   .select-custom__option a {
     padding: 8px;
+  }
+
+  .preloader__inner {
+    width: 190px;
+    height: 166px;
   }
 
   .breadcrumbs {
