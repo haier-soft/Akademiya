@@ -151,10 +151,9 @@ modal.forEach(item => {
 function formSuccess(form) {
   form.querySelectorAll("input").forEach(inp => inp.value = "")
   form.querySelector("textarea").value = ""
-  closeModal(feedbackModal)
-  setTimeout(() => {
-    openModal(successModal)
-  }, 500);
+  feedbackModal.querySelector(".modal__inner").classList.remove("open")
+  feedbackModal.classList.remove("open")
+  openModal(successModal)
 }
 // add padding to container when header is fixed
 function addPaddingToContainer() {
