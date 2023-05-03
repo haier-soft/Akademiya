@@ -401,6 +401,9 @@
 	}
   &__item {
     flex: 1 1 auto;
+    .subnavs {
+      pointer-events: none;
+    }
     &:hover {
       .menu-desktop__spn {
         background-color: $white;  
@@ -409,6 +412,7 @@
       .subnavs {    
         visibility: visible;
         opacity: 1;
+        pointer-events: auto
       }
       .subnavs__cols {
         padding-bottom: 32px;  

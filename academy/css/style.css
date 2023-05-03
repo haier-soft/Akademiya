@@ -1746,6 +1746,10 @@ small span {
   flex: 1 1 auto;
 }
 
+.menu-desktop__item .subnavs {
+  pointer-events: none;
+}
+
 .menu-desktop__item:hover .menu-desktop__spn {
   background-color: #FFFFFF;
   color: #193A8A;
@@ -1754,6 +1758,7 @@ small span {
 .menu-desktop__item:hover .subnavs {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .menu-desktop__item:hover .subnavs__cols {
