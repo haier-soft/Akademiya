@@ -1,7 +1,9 @@
+let paddingValue
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
     document.body.classList.remove("no-scroll")
+    paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
   }, 1100);
 }
 const breadCrumbs = document.querySelector(".breadcrumbs")
@@ -19,7 +21,6 @@ const successModal = document.querySelector(".success-modal")
 const errorModal = document.querySelector(".error-modal")
 const customSelect = document.querySelectorAll(".select-custom")
 const pageContent = document.querySelectorAll(".page-content")
-let paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
 function windoOnResize() {
   setVh()
   paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
@@ -120,6 +121,7 @@ feedbackBtn.forEach(btn => {
 })
 //show modal
 function openModal(modal) {
+  console.log(paddingValue)
   if (!document.querySelector(".icon-menu").classList.contains("active")) {
     if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
     document.body.style.paddingRight = paddingValue
