@@ -69,7 +69,7 @@ h2, .h2, .article h1, .privacy h1{
     font-size: 25px;
   } 
 }
-h3, .h3 {
+h3, .h3, .text-review__img {
   font-size: 40px;
   line-height: 110%;
   @media screen and (max-width: $bp1) {
@@ -1082,10 +1082,18 @@ small {
     .form__textarea {
       height: 236px;
     }
-    .form__footer, .form__txt {
+    .form__footer {
+      max-width: 100%
+    }
+    .form__txt {
       max-width: 343px;
     }
   }
+  @media (max-width: 430px) {
+    .form__txt {
+        max-width: none;
+    }
+}
 }
 .line-bottom {
   &:after {
@@ -1200,24 +1208,4 @@ small {
     }
   }
 }
-.flex-4 {
-  .swiper-slide {
-    flex: 0 0 calc(100%/4 - 24px/4);
-    margin-right: 8px;
-    @media (max-width: $bp2) {
-      flex: 0 0 calc(100%/3 - 16px/3);
-    }
-  }
-}
-.flex-3 {
-  .swiper-slide {
-    flex: 0 0 calc(100%/3 - 16px/3);
-    margin-right: 8px;
-  }
-}
-.flex-2 {
-  .swiper-slide {
-    flex: 0 0 calc(100%/2 - 8px/2);
-    margin-right: 8px;
-  }
-}
+

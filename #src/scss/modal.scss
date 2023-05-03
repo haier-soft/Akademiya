@@ -309,11 +309,7 @@
     }
     }
 }
-@media (max-width: $bp5) {
-    .form .form__txt {
-        max-width: none;
-    }
-}
+
 @media (max-width: 350px) {
   .feedback-modal .modal__inner {
       padding: 67px 0 0;

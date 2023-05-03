@@ -322,7 +322,7 @@ statItem.forEach(item => {
   observer.observe(item)
 })
 // add poster to video tag
-if (pageContent) {
+/* if (pageContent) {
   pageContent.forEach(item => {
     const vid = item.querySelectorAll("video")
     for (let i = 0; i < vid.length; i++) {
@@ -335,7 +335,7 @@ if (pageContent) {
       parent.appendChild(a)
     }
   })
-}
+} */
 // custom select open/close
 if (customSelect) {
   customSelect.forEach(select => {
