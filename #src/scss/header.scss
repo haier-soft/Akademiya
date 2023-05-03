@@ -91,18 +91,28 @@
     }
   }
   &.light {
-    .navbar ul li a,
-    .link-main,
-    .btn-arrow {
-          color: $white;
+    .social a svg,
+    .header__logo svg {
+      fill: $white;
+    }
+    .link-main {
+      color: $white;
     }
     .link-main:after {
       background-color: $white;
     }
-    .social a svg,
-    .header__logo svg,
-    .btn-arrow svg {
-      fill: $white;
+    @media (min-width: 700px) {
+      .navbar ul li a,
+      .link-main,
+      .btn-arrow {
+            color: $white;
+            svg {
+              fill: $white;
+            }
+      }
+      .link-main:after {
+        background-color: $white;
+      }
     }
   }
 }
@@ -227,6 +237,9 @@
     }
     &__header {
       min-height: 62px;
+      @media (max-width: 700px) {
+        min-height: 0;
+      }
     }
   }
   .navbar {
@@ -254,6 +267,7 @@
     transform: translateX(-100%);
     background: $white;
     transition: all .3s ease;
+    border-radius: 0;
     overflow: auto;
     &.active {
       transform: translateX(0);
@@ -558,7 +572,7 @@
     width: 100%;
     flex: 0 0 3px;
     height: 2.5px;
-    background-color: $dark-blue;
+    background-color: $base-blue;
     transition: all 0.3s ease;
   }
   &.active {

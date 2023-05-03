@@ -1200,6 +1200,9 @@ small span {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .select-custom {
@@ -1380,20 +1383,17 @@ small span {
   margin-right: 0;
 }
 
-.header.light .navbar ul li a,
-.header.light .link-main,
-.header.light .btn-arrow {
+.header.light .social a svg,
+.header.light .header__logo svg {
+  fill: #FFFFFF;
+}
+
+.header.light .link-main {
   color: #FFFFFF;
 }
 
 .header.light .link-main:after {
   background-color: #FFFFFF;
-}
-
-.header.light .social a svg,
-.header.light .header__logo svg,
-.header.light .btn-arrow svg {
-  fill: #FFFFFF;
 }
 
 .navbar ul {
@@ -1779,7 +1779,7 @@ small span {
   -ms-flex: 0 0 3px;
   flex: 0 0 3px;
   height: 2.5px;
-  background-color: #17064A;
+  background-color: #193A8A;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -2006,6 +2006,9 @@ small span {
   min-height: calc(100vh + 70px);
   min-height: calc(var(--vh, 1%) * 100 + 70px);
   padding-bottom: 98px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .pages-hero .h2 {
@@ -3299,6 +3302,9 @@ small span {
 .notfound .container {
   min-height: calc(100vh - 200px);
   min-height: calc(var(--vh, 1%) * 100 - 200px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .no-webp .notfound__inner {
@@ -4009,6 +4015,24 @@ small span {
 
 .success-modal .modal__content {
   background: url(../img/success-bg.webp) bottom 35px center/cover no-repeat, #CDCED2;
+}
+
+@media (min-width: 700px) {
+  .header.light .navbar ul li a,
+  .header.light .link-main,
+  .header.light .btn-arrow {
+    color: #FFFFFF;
+  }
+
+  .header.light .navbar ul li a svg,
+  .header.light .link-main svg,
+  .header.light .btn-arrow svg {
+    fill: #FFFFFF;
+  }
+
+  .header.light .link-main:after {
+    background-color: #FFFFFF;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5973,6 +5997,11 @@ small span {
 }
 
 @media (max-width: 700px) {
+  .play-btn {
+    width: 40px;
+    height: 40px;
+  }
+
   .header__logo {
     max-width: 230px;
   }
@@ -6016,6 +6045,10 @@ small span {
     color: #7D7D7D;
   }
 
+  .menu-mobile .navmenu-mobile__header {
+    min-height: 0;
+  }
+
   .menu-mobile {
     padding: 28px 16px 50px;
     position: fixed;
@@ -6031,6 +6064,7 @@ small span {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    border-radius: 0;
     overflow: auto;
   }
 
@@ -6451,11 +6485,6 @@ small span {
 
   .pagination__link {
     margin: 0 5px;
-  }
-
-  .play-btn {
-    width: 40px;
-    height: 40px;
   }
 
   .popup-close,

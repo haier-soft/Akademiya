@@ -4,6 +4,7 @@
         min-height: calc(100vh + 70px); 
         min-height: calc(var(--vh, 1%) * 100 + 70px);
         padding-bottom: 98px;
+        transition: all .3s ease;
     }
     .h2 {
         color: $white;

@@ -7,7 +7,8 @@
     }
     &__inner, .container {
         min-height: calc(100vh - 200px); 
-        min-height: calc(var(--vh, 1%) * 100 - 200px)
+        min-height: calc(var(--vh, 1%) * 100 - 200px);
+        transition: all .3s ease
     }
     &__inner {
         background-image: url(../img/404.jpg);

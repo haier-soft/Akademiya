@@ -120,7 +120,7 @@ function openModal(modal) {
   modal.classList.add("open")
   setTimeout(() => {
     modal.querySelector(".modal__inner").classList.add("open")
-  }, 0) 
+  }, 30) 
 }
 // unshow modal
 function closeModal(modal) {
@@ -151,7 +151,10 @@ modal.forEach(item => {
 function formSuccess(form) {
   form.querySelectorAll("input").forEach(inp => inp.value = "")
   form.querySelector("textarea").value = ""
-  openModal(successModal)
+  closeModal(feedbackModal)
+  setTimeout(() => {
+    openModal(successModal)
+  }, 500);
 }
 // add padding to container when header is fixed
 function addPaddingToContainer() {
@@ -184,39 +187,12 @@ function viewproblemSolution() {
 }
 viewproblemSolution()
 
-
-
-
-
-
-const mobileCheck = () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-  if (/android/i.test(userAgent)) {
-    vars.htmlEl.classList.add('page--android');
-    return "Android";
-  }
-
-  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    vars.htmlEl.classList.add('page--ios');
-    return "iOS";
-  }
-
-  return "unknown";
-}
-
-function findScrollbarWidth() {
-  paddingValue =  window.innerWidth - document.documentElement.clientWidth + 'px'
-}
-findScrollbarWidth()
-window.addEventListener("resize",findScrollbarWidth)
-
 // position of close btn in fancybox
 function fancyboxToolbarPos() {
   document.querySelector(".fancybox__toolbar").style.right = (window.innerWidth - document.querySelector(".fancybox__image").offsetWidth) /2 + "px"
   document.querySelector(".fancybox__toolbar").style.top = (window.innerHeight - document.querySelector(".fancybox__image").offsetHeight) /2 + "px"
 }
-/* const fancybox = Fancybox.bind('[data-fancybox="gallery"]', {
+const fancybox = Fancybox.bind('[data-fancybox="gallery"]', {
   infinite : true,
   autoFocus: false,
   dragToClose: false,
@@ -238,12 +214,6 @@ function fancyboxToolbarPos() {
     </svg>`
   },
   on: {
-    initLayout:  (fancybox,slide) =>  {
-      document.querySelector(".fancybox__container").style.paddingRight = paddingValue   
-      if (fancybox.options.target.classList.contains("video-gallery")) {
-        document.querySelector(".fancybox__container").classList.add("video-gallery")
-     }   
-    },
     ready:  (fancybox,slide) =>  { 
      setTimeout(() => {
       if (!fancybox.options.target.classList.contains("video-gallery")) {
@@ -254,10 +224,10 @@ function fancyboxToolbarPos() {
      }, 0); 
     },
   }
-});  */
+});
 
 //video gallery fancybox
-/* let fancyboxVideo = Fancybox.bind('[data-fancybox="video-gallery"]', {
+let fancyboxVideo = Fancybox.bind('[data-fancybox="video-gallery"]', {
   autoFocus: false,
   dragToClose: false,
   closeButton: "inside",
@@ -271,11 +241,7 @@ function fancyboxToolbarPos() {
     initLayout:  (fancybox,slide) =>  {
       document.querySelector(".fancybox__container").style.paddingRight = paddingValue        
       document.querySelector(".fancybox__container").classList.add("video-gallery") 
-      if (fixedBlocks) addPaddingToFixedEl(fixedBlocks)
     },
-    close:  (fancybox,slide) =>  {
-      if (fixedBlocks) removePaddingOfFixedEl(fixedBlocks)   
-    }
   }
 }); 
 // image-gallery fancyvox
@@ -314,66 +280,6 @@ let fancyboxImages = Fancybox.bind('[data-fancybox="gallery"]', {
     },
   }
 }); 
- */
-
-/* Fancybox.defaults = {
-  ...Fancybox.defaults,
-  Hash: false,
-  autoFocus: false,
-  dragToClose: false,
-    on: {
-      init: (fancybox,slide) => {
-        if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
-      }, 
-      close:  (fancybox,slide) =>  {
-       if (fixedBlocks) removePaddingOfFixedEl(fixedBlocks) 
-      },
-   },
-};  */
-/* Fancybox.bind('[data-fancybox="video-gallery"]', {
-  closeButton: "inside",
-  tpl: {
-    closeButton:`<button data-fancybox-close class=\"f-button is-close-btn\" title=\"{{CLOSE}}\"><svg viewBox='0 0 60 60'><path fill-rule='evenodd' clip-rule='evenodd' d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM32.3655 29.8459L46.4942 43.9745L44.1371 46.3316L30.0085 32.2029L15.6891 46.5223L13.332 44.1653L27.6514 29.8459L13.4958 15.6903L15.8529 13.3333L30.0085 27.4889L43.9733 13.524L46.3303 15.881L32.3655 29.8459Z'/></svg></button>`,
-    },
-  on: {
-    init: (fancybox,slide) => {
-      if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
-    //  setTimeout(() => {
-    //    console.log(slide)
-    //    document.querySelector(".fancybox__slide").innerHTML +=`<button data-fancybox-close class=\"f-button is-close-btn\" title=\"{{CLOSE}}\"><svg viewBox='0 0 60 60'><path fill-rule='evenodd' clip-rule='evenodd' d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM32.3655 29.8459L46.4942 43.9745L44.1371 46.3316L30.0085 32.2029L15.6891 46.5223L13.332 44.1653L27.6514 29.8459L13.4958 15.6903L15.8529 13.3333L30.0085 27.4889L43.9733 13.524L46.3303 15.881L32.3655 29.8459Z'/></svg></button>`
-    //  }, 0);
-      
-     
-      if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
-    }, 
-    destroy: (fancybox) => {
-      console.log("hhh")
-      setTimeout(() => {
-        if (fixedBlocks) removePaddingOfFixedEl(fixedBlocks) 
-      }, 00);
-    },  
-    }
-})
-Fancybox.bind('[data-fancybox="gallery"]', {
-  closeButton: "inside",
-  tpl: {
-    closeButton:`<div data-fancybox-close class=\"f-button is-close-btn\" title=\"{{CLOSE}}\"><svg viewBox='0 0 60 60'><path fill-rule='evenodd' clip-rule='evenodd' d='M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30ZM32.3655 29.8459L46.4942 43.9745L44.1371 46.3316L30.0085 32.2029L15.6891 46.5223L13.332 44.1653L27.6514 29.8459L13.4958 15.6903L15.8529 13.3333L30.0085 27.4889L43.9733 13.524L46.3303 15.881L32.3655 29.8459Z'/></svg></div>`,
-    },
-  on: {
-    ready: (fancybox,slide) => {
-      console.log(document.querySelector(".fancybox__slide has-html5video has-close-btn is-selected is-done"))
-      if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
-    }, 
-    close: (fancybox) => {
-      console.log(fancybox)
-    }
-    
-  }
-}) */
-
-
-
-
 
 //animate statistics numbers
 let statItem = document.querySelectorAll(".animate-numb");
