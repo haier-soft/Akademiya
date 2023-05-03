@@ -550,6 +550,14 @@
     }
     ul li a {
       color: $white;
+      &:hover {
+        background-color: $white; 
+        color:$base-blue;
+      }
+      &:active { 
+        background-color: $light-blue;
+        color:$white;
+      }
     }
   }
 }

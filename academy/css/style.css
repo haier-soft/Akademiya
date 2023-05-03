@@ -265,8 +265,7 @@ h2,
 }
 
 h3,
-.h3,
-.text-review__img {
+.h3 {
   font-size: 40px;
   line-height: 110%;
 }
@@ -314,8 +313,11 @@ small {
 }
 
 .text-small span,
+.text-small a,
 figcaption span,
-small span {
+figcaption a,
+small span,
+small a {
   color: #17064A;
 }
 
@@ -343,14 +345,14 @@ small span {
   object-fit: cover;
 }
 
-.img-contain {
+.media-contain {
   position: relative;
   overflow: hidden;
 }
 
-.img-contain img,
-.img-contain video,
-.img-contain iframe {
+.media-contain img,
+.media-contain video,
+.media-contain iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -470,13 +472,13 @@ small span {
   margin: 8px 48px 0 0;
 }
 
-.page-content p .page-video {
+.page-content p video {
   display: block;
   width: auto;
   position: relative;
 }
 
-.page-content p .page-video:before {
+.page-content p video:before {
   content: "";
   display: block;
   position: absolute;
@@ -490,7 +492,7 @@ small span {
   border-radius: 10px;
 }
 
-.page-content p .page-video:after {
+.page-content p video:after {
   content: "";
   position: absolute;
   display: block;
@@ -2371,9 +2373,9 @@ small span {
   margin-bottom: 0;
 }
 
-.item-problem {
+.item-problem,
+.item-problem__solution {
   padding: 16px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2384,6 +2386,10 @@ small span {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.item-problem {
+  position: relative;
 }
 
 .item-problem .text-small {
@@ -2426,7 +2432,6 @@ small span {
   visibility: hidden;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  padding: 16px;
   background-color: #193A8A;
   position: absolute;
   top: 0;
@@ -2434,23 +2439,35 @@ small span {
   width: 100%;
   height: 100%;
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 .item-problem__solution ul li {
+  margin-bottom: 16px;
+}
+
+.item-problem__solution ul li a {
+  display: block;
   font-weight: 600;
-  margin-bottom: 32px;
   color: #FFFFFF;
-  padding: 0 6px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.item-problem__solution ul li a:hover {
+  color: #193A8A;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 21px 47px rgba(8, 6, 72, 0.45);
+  box-shadow: 0px 21px 47px rgba(8, 6, 72, 0.45);
+}
+
+.item-problem__solution ul li a:active {
+  background-color: #7C8EBA;
+  color: #FFFFFF;
+  -webkit-box-shadow: 0px 21px 47px rgba(8, 6, 72, 0.45);
+  box-shadow: 0px 21px 47px rgba(8, 6, 72, 0.45);
 }
 
 .item-problem__solution .text-small {
@@ -4264,8 +4281,7 @@ small span {
   }
 
   h3,
-  .h3,
-  .text-review__img {
+  .h3 {
     font-size: 32px;
   }
 
@@ -4590,12 +4606,23 @@ small span {
     padding-left: 18px;
   }
 
-  .item-problem {
+  .item-problem,
+  .item-problem__solution {
     padding: 10px 12px 12px;
   }
 
-  .item-problem .text-small {
-    margin-bottom: 24px;
+  .item-problem .text-small,
+  .item-problem__solution .text-small {
+    margin: 0 0 24px;
+  }
+
+  .item-problem__solution ul li a {
+    padding: 8px 4px;
+  }
+
+  .item-problem__btn::before,
+  .item-problem__btn:after {
+    width: 20px;
   }
 
   .letter-review {
@@ -5054,8 +5081,7 @@ small span {
   }
 
   h3,
-  .h3,
-  .text-review__img {
+  .h3 {
     font-size: 26px;
   }
 
@@ -5390,17 +5416,21 @@ small span {
   }
 
   .item-problem .text-small {
-    margin-bottom: 16px;
+    margin: 0 0 16px;
   }
 
   .item-problem__btn {
-    padding: 6px 0 12px;
+    padding: 12px 0;
     cursor: pointer;
   }
 
   .item-problem__btn:before,
   .item-problem__btn:after {
     width: 20px;
+  }
+
+  .item-problem__solution ul li {
+    margin-bottom: 8px;
   }
 
   .main-reviews h2 {
@@ -6265,6 +6295,16 @@ small span {
     color: #FFFFFF;
   }
 
+  .col-subnavs ul li a:hover {
+    background-color: #FFFFFF;
+    color: #193A8A;
+  }
+
+  .col-subnavs ul li a:active {
+    background-color: #7C8EBA;
+    color: #FFFFFF;
+  }
+
   .icon-menu {
     display: block;
   }
@@ -6367,12 +6407,6 @@ small span {
   }
 }
 
-@media (max-width: 700px) and (max-width: 700px) {
-  .footer .col-subnavs ul li a {
-    color: #193A8A;
-  }
-}
-
 @media (max-width: 650px) {
   .stat__items {
     -webkit-box-orient: vertical;
@@ -6452,8 +6486,7 @@ small span {
   }
 
   h3,
-  .h3,
-  .text-review__img {
+  .h3 {
     font-size: 22px;
   }
 
@@ -6806,21 +6839,16 @@ small span {
     margin-bottom: 32px;
   }
 
-  .item-problem {
-    min-height: 368px;
-    padding: 14px 12px;
-  }
-
   .item-problem h4 {
     min-height: 110px;
   }
 
   .item-problem .text-small {
-    margin-bottom: 19px;
+    line-height: 22px;
   }
 
   .item-problem__btn {
-    padding: 0;
+    padding: 4px 0;
   }
 
   .item-problem__btn:before,
@@ -7282,7 +7310,7 @@ small span {
     right: 0;
     height: calc(100% - 154px);
     scrollbar-color: #7C8EBA #ECEEFF;
-    overflow-y: scroll;
+    overflow-y: auto;
     bottom: 150px;
   }
 
@@ -7374,10 +7402,6 @@ small span {
 
   .footer .menu-footer__desktop {
     display: none;
-  }
-
-  .footer .col-subnavs ul li a {
-    color: #FFFFFF;
   }
 
   .footer .navbar ul {
@@ -7497,6 +7521,22 @@ small span {
 @media (min-width: 992px) and (max-width: 1200px) {
   .main-hero h1 {
     max-width: 650px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 700px) {
+  .footer .col-subnavs ul li a {
+    color: #193A8A;
+  }
+
+  .footer .col-subnavs ul li a:hover {
+    background-color: #193A8A;
+    color: #FFFFFF;
+  }
+
+  .footer .col-subnavs ul li a:active {
+    background-color: #7C8EBA;
+    color: #193A8A;
   }
 }
 

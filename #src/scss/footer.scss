@@ -129,13 +129,6 @@
     }
 }
 @media (max-width: 700px) {
-    .footer {
-        @media (max-width: 700px) {
-            .col-subnavs ul li a {
-                color: $base-blue;
-            }
-        }
-    }
     .top-footer {
         gap: 47px 10px;
     }
@@ -156,7 +149,21 @@
     }
 
 }
-
+@media (min-width: $bp4) and (max-width: 700px) {
+    .footer {
+        .col-subnavs ul li a {
+            color: $base-blue;
+            &:hover {
+                background-color: $base-blue; 
+                color:$white;
+            }
+            &:active {
+                background-color: $light-blue; 
+                color: $base-blue;
+            }
+        }
+    }
+}
 @media (max-width: $bp4) {
     .footer {
         padding: 32px 0;
@@ -165,9 +172,6 @@
         }
         .menu-footer__desktop {
             display: none;
-        }
-        .col-subnavs ul li a {
-            color: $white;
         }
         .navbar ul {
             justify-content: center;

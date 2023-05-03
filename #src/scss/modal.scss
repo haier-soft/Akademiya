@@ -240,7 +240,7 @@
             right: 0;
             height: calc(100% - 154px);
             scrollbar-color: $light-blue #ECEEFF;
-            overflow-y: scroll;
+            overflow-y: auto;
             bottom: 150px;
         }
        .modal__scroll::-webkit-scrollbar-thumb {
