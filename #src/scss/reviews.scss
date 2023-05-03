@@ -227,6 +227,10 @@
 	.reviews__nav {
 	   justify-content: flex-start;
 	   overflow: auto;
+	   scrollbar-width:none;
+	   &::-webkit-scrollbar {
+		 height: 0px;
+	   }
     }
 }
 

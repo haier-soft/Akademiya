@@ -688,6 +688,14 @@ small span {
   transition: all 0.3s ease;
 }
 
+.btn-arrow:hover {
+  color: #17064A;
+}
+
+.btn-arrow:hover svg {
+  fill: #17064A;
+}
+
 .link-main {
   position: relative;
   white-space: nowrap;
@@ -706,6 +714,10 @@ small span {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.link-main:hover::after {
+  width: 46%;
 }
 
 .link-arrow {
@@ -896,6 +908,7 @@ small span {
   margin-top: -1px;
   background: #BEBEBE;
   border-radius: 88px;
+  cursor: pointer;
 }
 
 .swiper-link {
@@ -1570,6 +1583,7 @@ small span {
   justify-content: center;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .menu-mobile__btn:before {
@@ -1641,6 +1655,10 @@ small span {
 
 .navmenu-mobile__list {
   position: relative;
+}
+
+.navmenu-mobile__item {
+  cursor: pointer;
 }
 
 .navmenu-mobile__item:last-child {
@@ -1973,6 +1991,7 @@ small span {
   left: 0;
   width: 100%;
   min-width: 320px;
+  z-index: 2;
 }
 
 .no-webp .main-hero {
@@ -4151,21 +4170,7 @@ small span {
   }
 }
 
-@media (min-width: 768px) {
-  .btn-arrow:hover {
-    color: #17064A;
-  }
-
-  .btn-arrow:hover svg {
-    fill: #17064A;
-  }
-}
-
 @media (min-width: 992px) {
-  .link-main:hover::after {
-    width: 46%;
-  }
-
   .item-problem .item-problem__btn--open:hover + .item-problem__solution {
     visibility: visible;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -5382,6 +5387,7 @@ small span {
 
   .item-problem__btn {
     padding: 6px 0 12px;
+    cursor: pointer;
   }
 
   .item-problem__btn:before,
@@ -6594,13 +6600,14 @@ small span {
 
   .pagination__links {
     width: 100%;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    margin: 0 5px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 7px;
   }
 
   .pagination__link {
-    margin: 0 5px;
+    margin: 0 7px;
   }
 
   .popup-close,
@@ -7411,6 +7418,11 @@ small span {
     -ms-flex-pack: start;
     justify-content: flex-start;
     overflow: auto;
+    scrollbar-width: none;
+  }
+
+  .reviews__nav::-webkit-scrollbar {
+    height: 0px;
   }
 
   .our-team__items {

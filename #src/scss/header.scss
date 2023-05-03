@@ -195,6 +195,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
+    cursor:pointer;
     &:before {
       content: "";
       display: none;
@@ -300,6 +301,7 @@
     position: relative;
   }
   &__item {
+    cursor: pointer;
     &:last-child {
       border-radius: 0 0 0 8px;
     }
