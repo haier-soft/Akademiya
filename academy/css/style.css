@@ -220,7 +220,7 @@ body::-webkit-scrollbar-thumb {
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 18px;
   background-color: #ECEEFF;
 }
 

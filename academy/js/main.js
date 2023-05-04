@@ -1,10 +1,10 @@
-let paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
+let paddingValue
 document.body.style.paddingRight = paddingValue
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
     document.body.classList.remove("no-scroll")
-    document.body.style.paddingRight = "0px"
+    paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
   }, 1100);
 }
 const breadCrumbs = document.querySelector(".breadcrumbs")
