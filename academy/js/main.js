@@ -609,4 +609,3 @@ if (document.querySelector(".top-purpose__swiper")) {
 
 
 
-
