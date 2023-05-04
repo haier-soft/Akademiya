@@ -1,9 +1,10 @@
-let paddingValue
+let paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
+document.body.style.paddingRight = paddingValue
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
     document.body.classList.remove("no-scroll")
-    paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
+    document.body.style.paddingRight = "0px"
   }, 1100);
 }
 const breadCrumbs = document.querySelector(".breadcrumbs")
@@ -20,7 +21,6 @@ const feedbackModal = document.querySelector(".feedback-modal")
 const successModal = document.querySelector(".success-modal")
 const errorModal = document.querySelector(".error-modal")
 const customSelect = document.querySelectorAll(".select-custom")
-const pageContent = document.querySelectorAll(".page-content")
 function windoOnResize() {
   setVh()
   paddingValue = window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0 
@@ -321,21 +321,6 @@ statItem.forEach(item => {
   let observer = new IntersectionObserver(callback);
   observer.observe(item)
 })
-// add poster to video tag
-/* if (pageContent) {
-  pageContent.forEach(item => {
-    const vid = item.querySelectorAll("video")
-    for (let i = 0; i < vid.length; i++) {
-      const a = document.createElement("a")
-      a.classList.add("page-video")
-      a.setAttribute("data-fancybox", "video-gallery")
-      const parent = vid[i].parentNode
-      a.setAttribute("href", vid[i].getAttribute("src"))
-      a.appendChild(vid[i])
-      parent.appendChild(a)
-    }
-  })
-} */
 // custom select open/close
 if (customSelect) {
   customSelect.forEach(select => {

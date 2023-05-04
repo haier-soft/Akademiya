@@ -28,8 +28,12 @@
         padding: 0 16px;
         margin: 24px 0 18px;
         color: $base-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         h6 {
             margin-bottom: 24px;
+            flex: 1 1 auto;
         }
 	}
     .page-tags {

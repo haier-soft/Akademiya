@@ -38,7 +38,6 @@
 	.text-small {
         margin-bottom: 8px;
         span, a {
-            color: $dark-blue;
             margin-left: 8px;
         }
 	}
@@ -66,6 +65,9 @@
     .item-article__preview {
         padding-top: 48.9%;
     }
+    .item-article__body {
+        -webkit-line-clamp: 8;
+    }  
 }
 @media (max-width: $bp2) {
     .item-article {
