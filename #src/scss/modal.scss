@@ -75,7 +75,10 @@
       grid-column: 1/3;
     }
     .form__footer {
-      max-width: 53.8%;
+        max-width: 55%;
+        .btn-main {
+            max-width: 400px;
+        }
     }
     .form textarea {
         height: 193px
@@ -148,11 +151,15 @@
         }
     }
 }
-@media (max-width: $bp1) {
+@media (max-width: 1800px) {
     .feedback-modal {
         .modal__content {
             width: 53.5%;
         }
+    }
+}
+@media (max-width: $bp1) {
+    .feedback-modal {
         h3 {
             margin-bottom: 24px;
         }
@@ -179,14 +186,18 @@
       }
     }
 }
+@media (max-width: 1300px) {
+    .feedback-modal .modal__content {
+        width: 100%;
+        max-width: 720px;
+    }
+}
 @media (max-width: $bp2) {
     .feedback-modal {  
         .modal__inner {
             padding: 117px 24px;
         }
         .modal__content {
-            width: 100%;
-            max-width: 720px;
             height: auto;
             margin: 0 auto;
         }
@@ -202,6 +213,9 @@
         }
         .form__footer {
             max-width: 47%;
+            .btn-main {
+                max-width: none;
+            }
         }
         .h6 {
             margin-bottom: 36px;
@@ -232,8 +246,7 @@
             background-color: #fff;
         }
         .modal__scroll {
-            padding: 0 16px;/* 
-            bottom: 16px; */
+            padding: 0 16px;
             position: absolute;
             top: 16px;
             left: 0;
