@@ -11,25 +11,25 @@
 		flex: 0 0 33%;
 		margin-right: 20px;
 	}
-	&__nav {
+	&__navitems {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
 	}
-	&__navitem {
+	&__navitem {	
+		display: block;
 		color: $base-blue;
 		padding: 10px 16px;
-		border-radius: 4px;
-		margin-right: 25px;
+		border-radius: 4px;	
 		white-space: nowrap;
 		border: 1px solid $light-gray;
 		line-height: 25px;
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
 		&.active {
 			color: $white;
 			background: $light-blue;
-		}
-		&:last-child {
-			margin-right: 0;
 		}
 	}
 	&__wrapper {
@@ -149,7 +149,7 @@
 	}
 }
 @media (max-width: $bp1) {
-	.reviews__navitem {
+	.reviews__navitem a {
 		line-height: 110%;
 	}
 	.text-review__img-container {
@@ -162,21 +162,14 @@
 }
 @media (max-width: $bp2) {
 	.reviews__header {
-		flex-direction: column;
+		display: block;
 		p {
 			max-width: 343px;
 		}
 	}
 	.reviews__nav {
-		width: calc(100% + 30px);
-		margin: 0 -15px;
+		display: flex;
 		justify-content: center;
-	}
-	.reviews__navitem:first-child {
-		margin-left: 15px;
-	}
-	.reviews__navitem:last-child {
-		margin-right: 15px;
 	}
 	.reviews__content {
 		margin: 0 auto 45px 0;
@@ -226,20 +219,29 @@
 		p {
 			font-size: 15px;
 		}
-	}
-	.reviews__nav {
-		&.letters-nav {
-			justify-content: flex-start;
-		}
-		&.texts-nav {
-			justify-content: center;
-		}
-		&.video-nav {
-			justify-content: flex-end;
-		}
-	}
+	}	
 	.reviews__navitem {
 		margin-right: 16px;
+	}
+	.reviews__nav {
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+		overflow: hidden;
+	}
+	.reviews__navitems {
+		overflow: auto;
+		scrollbar-width:none;
+		padding-bottom: 6px;
+		scrollbar-width: 0;
+		padding-bottom: 10px;
+	 }
+	.reviews__navitem {
+		&:first-child {
+			margin-left: 15px;
+		}
+		&:last-child {
+			margin-right: 15px;
+		}
 	}
 	.text-review {
 		padding: 16px;
@@ -268,16 +270,7 @@
 		margin-bottom: 16px;
 	}
 }
-@media (max-width: $bp5) {
-	.reviews__nav {
-	   justify-content: flex-start;
-	   overflow: auto;
-	   scrollbar-width:none;
-	   &::-webkit-scrollbar {
-		 height: 0px;
-	   }
-    }
-}
+
 
 
 
