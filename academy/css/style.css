@@ -472,41 +472,6 @@ small a {
   margin: 8px 48px 0 0;
 }
 
-.page-content p video {
-  display: block;
-  width: auto;
-  position: relative;
-}
-
-.page-content p video:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(21, 47, 112, 0.5)), to(rgba(21, 47, 112, 0.5)));
-  background: -o-linear-gradient(bottom, rgba(21, 47, 112, 0.5), rgba(21, 47, 112, 0.5));
-  background: linear-gradient(0deg, rgba(21, 47, 112, 0.5), rgba(21, 47, 112, 0.5));
-  border-radius: 10px;
-}
-
-.page-content p video:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 53px;
-  height: 53px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background: url(../img/icons/play.svg);
-  z-index: 2;
-}
-
 .page-content figure figcaption {
   margin-top: 8px;
 }
