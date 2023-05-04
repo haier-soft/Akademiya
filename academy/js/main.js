@@ -1,5 +1,4 @@
 let paddingValue
-document.body.style.paddingRight = paddingValue
 window.onload = function () {
   setTimeout(() => {
     document.body.classList.add("loaded")
