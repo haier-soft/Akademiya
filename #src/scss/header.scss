@@ -339,7 +339,7 @@
       transform: translateY(0);
     }
   }
-  @media screen and (max-width: 700px) {
+  @media (max-width: 700px) {
     &__item {
       margin-bottom: 12px;
       box-shadow: 0px 0px 10px -1px rgba(8, 6, 72, 0.2);

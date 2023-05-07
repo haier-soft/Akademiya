@@ -25,13 +25,13 @@ body {
   -webkit-text-size-adjust: 100%;
   word-break: break-word;
   overflow-x: hidden;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 16px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 14px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 13px;
   }
 }
@@ -46,39 +46,39 @@ h1, .h1 {
   font-size: 60px;
   font-weight: 600;
   line-height: 110%;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 50px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 38px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 28px;
   }
 }
 h2, .h2, .article h1, .privacy h1{
   font-size: 52px;
   line-height: 110%;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 42px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 32px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 25px;
   } 
 }
 h3, .h3 {
   font-size: 40px;
   line-height: 110%;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 32px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 26px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 22px;
   }
 }
@@ -86,13 +86,13 @@ h4, .h4 {
   font-size: 28px;
   font-weight: 600;
   line-height: 110%;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 24px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 22px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 20px;
   }
 }
@@ -100,10 +100,10 @@ h5, .h5, blockquote{
   font-weight: 600;
   font-size: 24px;
   line-height: 130%; 
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 20px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 18px;
   }
 }
@@ -111,13 +111,13 @@ h6, .h6 {
   font-size: 22px;
   line-height: 110%;
   color: $dark-blue;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 20px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 18px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 17px;
   }
 }
@@ -125,13 +125,13 @@ p {
   font-size: 20px;
   line-height: 130%;
   color: $dark-blue;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 16px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 15px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 12px;
   }
 }
@@ -140,10 +140,10 @@ p {
   font-size: 18px;
   line-height: 130%;
   color: $dark-gray;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 14px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 12px;
   }
 }
@@ -156,13 +156,13 @@ small {
   span, a {
     color: $dark-blue;
   }
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     font-size: 14px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     font-size: 13px;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     font-size: 12px;
   }
 }
@@ -172,11 +172,11 @@ small {
   max-width: 1590px;
   padding: 0 15px;
   margin: 0 auto;
-  @media screen and (max-width: $bp1) {
+  @media (max-width: $bp1) {
     width: 100%;
     max-width: 1230px;
   }
-  @media screen and (max-width: $bp3) {
+  @media (max-width: $bp3) {
     max-width: 750px;
   }
 }
@@ -366,7 +366,7 @@ small {
       }
     }
   }  
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     h1, h2, h3, h4, h5, .h5, h6,.h6, p, hr, ol, ul, figure {
       margin-bottom: 24px;
     }
@@ -385,7 +385,7 @@ small {
       }
     }
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     p {
       font-size: 15px;
     }
@@ -399,7 +399,7 @@ small {
 .page-lbl {
   font-weight: 600;
   max-width: 280px;
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     max-width: 256px;
   }
 }
@@ -771,10 +771,10 @@ small {
     border-radius: 88px;
     cursor: pointer;
   }
-  @media screen and (max-width: $bp3) {
+  @media (max-width: $bp3) {
     display: block;
   }
-  @media screen and (max-width: $bp4) {
+  @media (max-width: $bp4) {
     margin: 0 24px;
   }
 }
@@ -783,7 +783,7 @@ small {
   text-align: right;
   border-top: 1px solid $light-gray;
   margin-top: 40px;
-  @media screen and (max-width: $bp3) {
+  @media (max-width: $bp3) {
     padding-top: 20px;
   }
   @media (max-width:$bp4) {
@@ -962,13 +962,13 @@ small {
       font-weight: 600;
       font-size: 18px;
       line-height: 110%;
-      @media screen and (max-width: $bp1) {
+      @media  (max-width: $bp1) {
         font-size: 16px;
       }
-      @media screen and (max-width: $bp2) {
+      @media (max-width: $bp2) {
         font-size: 14px;
       }
-      @media screen and (max-width: $bp4) {
+      @media (max-width: $bp4) {
         font-size: 13px;
       }
   }
@@ -1020,7 +1020,7 @@ small {
       width: 100%;
       margin-bottom: 16px;
   }
-  @media screen and (max-width: $bp2) {
+  @media (max-width: $bp2) {
     .form__item {
       margin-bottom: 32px;
     }

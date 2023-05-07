@@ -110,7 +110,7 @@
         margin-bottom: -38px;
     }    
 }
-@media screen and (max-width: $bp1) {
+@media (max-width: $bp1) {
     .purpose__bottom h4 {
         max-width: 88.5%;
     }
@@ -130,7 +130,7 @@
         }       
     }
 }
-@media screen and (max-width: 1150px) {
+@media (max-width: 1150px) {
     .purpose .page-lbl {
         max-width: 271px
     }
@@ -181,7 +181,7 @@
         }
     }
 }
-@media screen and (max-width: $bp3) {
+@media (max-width: $bp3) {
     .top-purpose .swiper {
         overflow: hidden;
         border-top: none;
@@ -189,7 +189,7 @@
         margin-top: 0;
     }
 }
-@media screen and (max-width: $bp4) {
+@media (max-width: $bp4) {
     .purpose .page-lbl {
         margin: 0 auto;
         text-align: center;
