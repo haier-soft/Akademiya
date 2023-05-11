@@ -59,14 +59,29 @@
         justify-content: flex-start;
     }
 }
-@media (min-width: 1930px) {
+@media (min-width: 2500px) {
     .main-test__img {
-        top: 0;
+        bottom: 0;
+        img {
+            position: absolute;
+            right: 0;
+            top: 0%;
+            bottom: 0;
+            object-fit: cover;
+            width: 96.5%;
+            max-height: 100%;
+        }
+
     }
 }
 @media (min-width: 2200px) {
     .main-test__img {
         transform: translateY(-6%);
+    }
+}
+@media (min-width: 1930px) {
+    .main-test__img {
+        top: 0;
     }
 }
 @media (max-width: $bp1) {

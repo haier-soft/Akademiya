@@ -4267,6 +4267,23 @@ small a {
   }
 }
 
+@media (min-width: 2500px) {
+  .main-test__img {
+    bottom: 0;
+  }
+
+  .main-test__img img {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 96.5%;
+    max-height: 100%;
+  }
+}
+
 @media (max-width: 1800px) {
   .feedback-modal .modal__content {
     width: 53.5%;
