@@ -59,7 +59,7 @@
         justify-content: flex-start;
     }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2500px) and (max-width: 3600px){
     .main-test__img {
         bottom: 0;
         img {
