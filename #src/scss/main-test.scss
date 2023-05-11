@@ -59,6 +59,16 @@
         justify-content: flex-start;
     }
 }
+@media (min-width: 1930px) {
+    .main-test__img {
+        top: 0;
+    }
+}
+@media (min-width: 2200px) {
+    .main-test__img {
+        transform: translateY(-6%);
+    }
+}
 @media (max-width: $bp1) {
     .main-test__content {
         min-height: 490px;

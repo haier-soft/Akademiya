@@ -4253,6 +4253,20 @@ small a {
   }
 }
 
+@media (min-width: 1930px) {
+  .main-test__img {
+    top: 0;
+  }
+}
+
+@media (min-width: 2200px) {
+  .main-test__img {
+    -webkit-transform: translateY(-6%);
+    -ms-transform: translateY(-6%);
+    transform: translateY(-6%);
+  }
+}
+
 @media (max-width: 1800px) {
   .feedback-modal .modal__content {
     width: 53.5%;

@@ -748,7 +748,12 @@
         </div>
     </div>
     <div class="main-test__img">
-        <picture><source srcset="img/test-bg.webp" type="image/webp"><img src="img/test-bg.png" alt="Тест на определение квалификации"></picture>
+        <picture>
+            <source srcset="img/test-bg-2500.webp" media="(min-width: 1930px)" type="image/webp"/>
+            <source srcset="img/test-bg-2500.png" media="(min-width: 1930px)" />
+            <source srcset="img/test-bg.webp" type="image/webp"/>
+            <img src="img/test-bg.png" alt="Тест на определение квалификации">
+        </picture>
     </div>
 </section>
         <!--reviews-slider-->
