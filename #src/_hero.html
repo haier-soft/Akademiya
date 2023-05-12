@@ -7,6 +7,7 @@
                 <svg><use xlink:href="img/iconsprite/sprite.svg#arrow-up"></use></svg>
             </button>
         </div>
+        <img class="main-hero__img--mobile" src="img/hero-mobile.jpg" alt="">
         <div class="main-hero__bottom">
             <div class="main-hero__items">
                 <div class="item-hero">
@@ -31,4 +32,10 @@
             </div>
         </div>
     </div>
+    <picture>
+        <source srcset="img/hero.webp" media="(max-width: 1920px)" type="image/webp">
+        <source srcset="img/hero.jpg" media="(max-width: 1920px)">
+        <source srcset="img/hero-2k.webp" type="image/webp">
+        <img class="main-hero__img" src="img/hero-2k.jpg" alt="">
+    </picture>
 </section>

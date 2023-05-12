@@ -1,6 +1,10 @@
 .main-form {
     padding: 64px 0;
-    background: url(../img/form-bg.jpg) center/cover no-repeat, #CACDD4;
+    background-image: url(../img/form-bg.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #CACDD4;
     .container {
         display: flex;
     } 
@@ -26,6 +30,12 @@
         min-width: 65%;
         max-width: 513px;
     }
+}
+@media (min-width: 2100px){
+    .main-form {
+        background-position: center;
+    }
+    
 }
 @media (max-width: $bp1) {
     .main-form {
@@ -81,17 +91,11 @@
        margin-bottom: 32px;
     }    
 }
-@media (max-width: $bp4) {
+@media (max-width: 700px) {
     .main-form {
         padding-top: 0;
-        background-image: none;
-        &:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 69.5vw;
-            background: url(../img/form-bg-mobile.png) center /cover no-repeat;
-        }
+        background: url(../img/form-bg-mobile.png) top center /contain no-repeat, #CACDD4;;
+        padding-top: 69.5vw;;
     }
     .main-form__left {
         margin: 0 0 9px 0;
@@ -108,13 +112,19 @@
     }  
     .main-form .h6,
     .main-form h6 {
-        max-width: 280px;
-        margin: 0 auto;
+        margin: 0 auto 20px;
         text-align: center;
     }
     .main-form.with-sub {
         .main-form__right {
             margin-top: 32px;
         }
+    }
+}
+@media (max-width: $bp4) {
+    .main-form .h6,
+    .main-form h6 {
+        max-width: 280px;
+        margin-bottom: 0;
     }
 }

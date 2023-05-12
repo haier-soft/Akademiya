@@ -11,17 +11,18 @@
         transition: all .3s ease
     }
     &__inner {
-        background-image: url(../img/404.jpg);
+         background-image: url(../img/404.jpg);
         background-position: center left;
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 100% auto; 
+        position: relative;
     }
     .container {
         padding-bottom: 120px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;   
+        align-items: flex-end; 
     }
 	&__content {
         padding-right: 3.4vw;
@@ -35,9 +36,6 @@
         }
     }
     @media(max-width: $bp1) {
-        &__inner {
-            background-position: center left -20px;
-        }
         .container {
           padding-bottom: 90px;
         }
@@ -47,8 +45,7 @@
     }
     @media(max-width: 1350px) {
         &__inner {
-            background-size: 120% auto;
-            background-position: center left -60px;
+            background-size: 110% auto;
         }
         &__content {
             padding-right: 0;

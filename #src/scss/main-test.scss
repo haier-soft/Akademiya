@@ -1,6 +1,8 @@
 .main-test {
     position: relative;
-    &:after {
+    padding: 40px 0;
+    background: linear-gradient(180deg, #D9DADC 36.86%, #ECF0F3 100%);
+   /*  &:after {
         content: "";
         display: block;
         position: absolute;
@@ -10,7 +12,7 @@
         height: 100%;
         z-index: -1;
         background: linear-gradient(180deg, #D9DADC 36.86%, #ECF0F3 100%);
-    }
+    } */
     &__content {
         max-width: 49.75%;
         min-height: 718px;
