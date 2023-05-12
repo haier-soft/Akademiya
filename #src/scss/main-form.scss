@@ -1,10 +1,18 @@
 .main-form {
     padding: 64px 0;
-    background-image: url(../img/form-bg.jpg);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: #CACDD4;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
     .container {
         display: flex;
     } 
@@ -31,17 +39,9 @@
         max-width: 513px;
     }
 }
-@media (min-width: 2100px){
-    .main-form {
-        background-position: center;
-    }
-    
-}
 @media (max-width: $bp1) {
     .main-form {
         padding: 48px 0;
-        background-size: contain;
-        background-position: center left -72px;
         &__right {
             justify-content: flex-end;
         }
@@ -50,14 +50,16 @@
             max-width: none;
         }
     }
+    .main-form__img {
+        left: -70px;
+        object-fit: contain;
+    }
     .main-form__left{
         flex: 0 0 53%;
     }
 }
 @media (max-width: $bp2) {
     .main-form {
-        background-position: top -40px left -72px;
-        background-size: auto 420px;
         padding: 0 0 48px;
         &.with-sub {
             .main-form__header {
@@ -67,17 +69,21 @@
             }
         } 
     }
+    .main-form__img {
+        top: -30px;
+        height: auto;
+    }
     .main-form .container {
         display: block;
     }
     .main-form__header {
-        min-height: 315px;
+        max-width: 60%;
+        min-height: 40vw;
+        margin-left: auto;
         padding-top: 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin-left: auto;
-        max-width: 66%;
+        justify-content: center;        
     }
     .main-form__left {
         margin-right: 0;
@@ -93,17 +99,18 @@
 }
 @media (max-width: 700px) {
     .main-form {
-        padding-top: 0;
-        background: url(../img/form-bg-mobile.png) top center /contain no-repeat, #CACDD4;;
         padding-top: 69.5vw;;
+    }
+    .main-form__img {
+        left: 0;
     }
     .main-form__left {
         margin: 0 0 9px 0;
     }
     .main-form__header {
-        max-width: none !important;
-        min-height: 0 !important;
-        padding-top: 0 !important;
+        max-width: 477px;
+        min-height: 0 ;
+        padding-top: 0 ;
         text-align: center;
         margin: 0 auto;
         h6 {
@@ -122,9 +129,17 @@
     }
 }
 @media (max-width: $bp4) {
+    .main-form__header {
+        max-width: 343px;
+    }
     .main-form .h6,
     .main-form h6 {
         max-width: 280px;
         margin-bottom: 0;
+    }
+}
+@media (max-width: 320px) {
+    .main-form {
+        padding-top: 220px;
     }
 }

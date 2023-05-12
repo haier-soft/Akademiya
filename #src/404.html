@@ -15,7 +15,14 @@
     <main class="main">
         <!--notfound-->
         <section class="notfound">
-            <div class="notfound__inner">
+            <picture>
+                <source srcset="img/404-bg-tablet.webp" media="(max-width: 1200px)" type="image/webp">
+                <source srcset="img/404-bg-tablet.jpg" media="(max-width: 1200px)">
+                <source srcset="img/404.webp" media="(max-width: 1920px)" type="image/webp">
+                <source srcset="img/404.jpg" media="(max-width: 1920px)">
+                <source srcset="img/404-bg-2k.webp" type="image/webp">
+                <img class="notfound__img" src="img/404-bg-2k.jpg" alt="">
+            </picture>
                 <div class="container">
                     <div class="notfound__content">
                         <h1>Извините,<br>что-то произошло!</h1>
@@ -25,7 +32,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+
         </section>
     </main>
     @@include("_modal.html")  
