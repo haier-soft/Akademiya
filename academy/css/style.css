@@ -5004,7 +5004,7 @@ small a {
   }
 
   .notfound .container {
-    padding-top: 70vw;
+    padding-top: 77vw;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -6394,9 +6394,9 @@ small a {
   }
 
   .main-form__header {
-    max-width: 477px;
-    min-height: 0;
-    padding-top: 0;
+    max-width: 477px !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
     text-align: center;
     margin: 0 auto;
   }
@@ -7168,6 +7168,12 @@ small a {
 
   .course-block .btn-main {
     min-width: 270px;
+  }
+
+  .notfound__img {
+    left: -10%;
+    width: 120%;
+    max-width: 120%;
   }
 
   .notfound .container {

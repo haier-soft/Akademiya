@@ -57,7 +57,7 @@
             height: calc(100% - 100px);
         }
         .container {
-            padding-top: 70vw;
+            padding-top: 77vw;
             justify-content: flex-end;
             align-items: center;
             text-align: center;
@@ -65,9 +65,14 @@
         }
     }
     @media (max-width: $bp4) {
+        &__img {
+            left: -10%;
+            width: 120%;
+            max-width: 120%;
+        }
         .container {
             padding-bottom: 92px;
-        }
+        } 
         .btn {
             min-width: 230px;
         }
