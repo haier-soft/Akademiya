@@ -7165,6 +7165,7 @@ small a {
 
   .notfound .container {
     padding-bottom: 92px;
+    min-height: calc(100vh - 50px);
   }
 
   .notfound .btn {
