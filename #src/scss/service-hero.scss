@@ -1,8 +1,6 @@
 .pages-hero {
     position: relative;
     .container {
-        min-height: calc(100vh + 70px); 
-        min-height: calc(var(--vh, 1%) * 100 + 70px);
         padding-bottom: 98px;
         transition: all .3s ease;
     }
@@ -52,9 +50,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-        img, video, iframe {
             object-fit: cover;
         }
     }
@@ -115,7 +110,6 @@
 @media (max-width: $bp1) {
     .pages-hero .container {
         padding-bottom: 104px;
-        min-height: 100vh;
     }
     .pages-hero__suptitle {
         margin-bottom: 32px; 
@@ -132,14 +126,12 @@
 @media (max-width: $bp2) {
     .pages-hero .container {
         padding-top: 220px;
+        padding-bottom: 72px;
     }
     .spinner {
         flex: 0 0 120px;
         width: 120px;
         height: 120px;
-    }
-    .pages-hero .container {
-        padding-bottom: 72px;
     }
     .pages-hero__suptitle {
         margin-bottom: 24px;
@@ -155,6 +147,7 @@
         text-align: center;
     }
     .pages-hero .container {
+        min-height: calc(100vh - 70px);
         padding-bottom: 21px;
     }
     .pages-hero__bottom {
