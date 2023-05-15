@@ -6458,6 +6458,7 @@ small a {
 @media (max-width: 690px) {
   .course-program__img {
     position: relative;
+    margin-top: -30px;
   }
 
   .course-program {
