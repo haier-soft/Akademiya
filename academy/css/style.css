@@ -2533,17 +2533,6 @@ small a {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(36.86%, #D9DADC), to(#ECF0F3));
   background: -o-linear-gradient(top, #D9DADC 36.86%, #ECF0F3 100%);
   background: linear-gradient(180deg, #D9DADC 36.86%, #ECF0F3 100%);
-  /*  &:after {
-       content: "";
-       display: block;
-       position: absolute;
-       top: 0;
-       right: 0;
-       width: 50%;
-       height: 100%;
-       z-index: -1;
-       background: linear-gradient(180deg, #D9DADC 36.86%, #ECF0F3 100%);
-   } */
 }
 
 .main-test__content {
@@ -5465,8 +5454,8 @@ small a {
     font-size: 14px;
   }
 
-  .main-test:after {
-    width: 100%;
+  .main-test {
+    padding: 0;
   }
 
   .main-test__content {
