@@ -616,6 +616,7 @@ if (document.querySelector(".pages-hero")) {
    if (vid) {
       vid.autoplay = true
       vid.loop = true
+      vid.muted = true
       heroPage.querySelector(".spinner").style.visibility="hidden"
    }
 }
