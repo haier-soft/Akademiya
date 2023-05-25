@@ -619,7 +619,10 @@ if (document.querySelector(".pages-hero")) {
       vid.muted = true
       heroPage.querySelector(".spinner").style.visibility="hidden"
    }
-}
+   if (heroPoster.querySelector("iframe") ) {
+    heroPage.querySelector(".spinner").style.visibility="hidden"
+   }
+} 
 
 
 
