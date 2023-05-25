@@ -986,13 +986,25 @@ small {
   &__item__error {
     display: none;
     align-items: center;
-    padding: 6px 24px 0 24px;
+    padding: 0 24px 0 44px;
+    margin-top: 6px;
     color: $red;
-    svg {
-      flex: 0 0 10px;
+    position: relative;
+    &:before,&:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      height: 1px;
       width: 10px;
-      margin-right: 11px;
-      fill: $red;
+      background-color: #b62732;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
     }
   }
   &__textarea {

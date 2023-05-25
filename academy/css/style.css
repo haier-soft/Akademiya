@@ -1127,17 +1127,34 @@ small a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 6px 24px 0 24px;
+  padding: 0 24px 0 44px;
+  margin-top: 6px;
   color: #B62732;
+  position: relative;
 }
 
-.form__item__error svg {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 10px;
-  flex: 0 0 10px;
+.form__item__error:before,
+.form__item__error:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  height: 1px;
   width: 10px;
-  margin-right: 11px;
-  fill: #B62732;
+  background-color: #b62732;
+}
+
+.form__item__error:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.form__item__error:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .form__textarea {
@@ -3263,7 +3280,6 @@ small a {
 }
 
 .text-review__img {
-  display: block;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -3272,12 +3288,6 @@ small a {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -3288,6 +3298,8 @@ small a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   position: relative;

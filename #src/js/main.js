@@ -158,7 +158,11 @@ modal.forEach(item => {
 })
 //form onsubmit
 function formSuccess(form) {
-  form.querySelectorAll("input").forEach(inp => inp.value = "")
+  form.querySelectorAll("input").forEach(inp => {
+    if (inp.type != "hidden") {
+      inp.value = ""
+    } 
+  })
   form.querySelector("textarea").value = ""
   feedbackModal.querySelector(".modal__inner").classList.remove("open")
   feedbackModal.classList.remove("open")
@@ -605,7 +609,16 @@ if (document.querySelector(".top-purpose__swiper")) {
     speed: 800
   })
 }
-
+if (document.querySelector(".pages-hero")) {
+   const heroPage = document.querySelector(".pages-hero")
+   const heroPoster = heroPage.querySelector(".pages-hero__poster")
+   const vid = heroPoster.querySelector("video") 
+   if (vid) {
+      vid.autoplay = true
+      vid.loop = true
+      heroPage.querySelector(".spinner").style.visibility="hidden"
+   }
+}
 
 
 
