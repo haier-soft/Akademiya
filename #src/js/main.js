@@ -120,7 +120,6 @@ feedbackBtn.forEach(btn => {
 })
 //show modal
 function openModal(modal) {
-  console.log(paddingValue)
   if (!document.querySelector(".icon-menu").classList.contains("active")) {
     if (fixedBlocks) addPaddingToFixedEl(fixedBlocks) 
     document.body.style.paddingRight = paddingValue
@@ -286,10 +285,7 @@ let fancyboxImages = Fancybox.bind('[data-fancybox="gallery"]', {
             fancyboxToolbarPos()
           }
         } )
-    },
-    resize: () => {
-      console.log("s")
-    },
+    }
   }
 }); 
 
@@ -623,6 +619,7 @@ if (document.querySelector(".pages-hero")) {
     heroPage.querySelector(".spinner").style.visibility="hidden"
    }
 } 
+$('input[type=tel').mask("+7 (999) 999-99-99");
 
-
+  
 
